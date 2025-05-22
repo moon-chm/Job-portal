@@ -1,0 +1,226 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'nbar.css' %}">
+
+    <link rel="stylesheet" href="{% static 'AStatus.css' %}">
+
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<script src = "{% static 'JavaScript/EmpApplyButton.js' %}">
+</script>
+
+<body>
+    {%include 'Emp/nbar.html' %}
+
+
+    <div class="Display">
+
+
+
+        {% for Succesfull in sstpost %}
+        <div class="DisplayJob">
+
+          <div class="Company_Logo">
+              <img class="logo_img" src="{{Succesfull.jp_job_com_logo}}">
+             
+          </div>
+          
+           <div class="JopInfo" method="POST" action="EmpHome">
+            
+                <table >
+                  <tr>
+                      <td colspan="2" class="titles">
+                          <b>{{Succesfull.jp_com_name}}</b>
+                      </td>
+
+                 
+                       <td colspan="2" class="titles">
+                         <b> {{Succesfull.jp_job_title}} </b>
+                       </td>
+                  </tr>
+                  <tr>
+                        <td class="space">
+                           {{Succesfull.jp_joblpg}}
+                        </td>
+                        <td class="space">
+                          {{Succesfull.jp_job_state}}
+                        </td>
+                        <td class="space">
+                          {{Succesfull.jp_job_pincode}}
+                        </td>
+                        <td class="space">
+
+                        </td>
+                  </tr>
+                  <tr>
+                      <td colspan="4" class="mdspace">
+                          {{Succesfull.jp_job_deteils}}
+                       </td>
+
+                  </tr>
+                  <tr>
+                      <td colspan="4" class="mrspace">
+                          {{Succesfull.jp_job_recruitment}} 
+                      </td>
+                  </tr>
+               </table>
+            
+           </div>
+           
+
+        </div>
+        <div class="sjp">
+              <p class="lebalc">
+                <b>  Select Job Post  </b>
+              </p>
+        </div>
+   
+        {% endfor %} 
+
+
+<!--second part-->
+
+
+        {% for apply in fstpost %}
+          <div class="DisplayJob">
+
+            <div class="Company_Logo">
+                <img class="logo_img" src="{{apply.jp_job_com_logo}}">
+               
+            </div>
+            
+             <div class="JopInfo" method="POST" action="EmpHome">
+              
+                  <table >
+                    <tr>
+                        <td colspan="2" class="titles">
+                            <b>{{apply.jp_com_name}}</b>
+                        </td>
+
+                   
+                         <td colspan="2" class="titles">
+                           <b> {{apply.jp_job_title}} </b>
+                         </td>
+                    </tr>
+                    <tr>
+                          <td class="space">
+                             {{apply.jp_joblpg}}
+                          </td>
+                          <td class="space">
+                            {{apply.jp_job_state}}
+                          </td>
+                          <td class="space">
+                            {{apply.jp_job_pincode}}
+                          </td>
+                          <td class="space">
+
+                          </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="mdspace">
+                            {{apply.jp_job_deteils}}
+                         </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="mrspace">
+                            {{apply.jp_job_recruitment}} 
+                        </td>
+                    </tr>
+                 </table>
+              
+             </div>
+             
+
+          </div>
+          <div class="ajp">
+                <p class="lebalc">
+                  <b>  Apply Job Post </b>
+                </p>
+          </div>
+     
+          {% endfor %} 
+
+
+
+       
+<!--threed part-->
+ 
+             {% for reject in rstpost %}
+          <div class="DisplayJob">
+
+            <div class="Company_Logo">
+                <img class="logo_img" src="{{reject.jp_job_com_logo}}">
+               
+            </div>
+            
+             <div class="JopInfo" method="POST" action="EmpHome">
+              
+                  <table >
+                    <tr>
+                        <td colspan="2" class="titles">
+                            <b>{{reject.jp_com_name}}</b>
+                        </td>
+
+                   
+                         <td colspan="2" class="titles">
+                           <b> {{reject.jp_job_title}} </b>
+                         </td>
+                    </tr>
+                    <tr>
+                          <td class="space">
+                             {{reject.jp_joblpg}}
+                          </td>
+                          <td class="space">
+                            {{reject.jp_job_state}}
+                          </td>
+                          <td class="space">
+                            {{reject.jp_job_pincode}}
+                          </td>
+                          <td class="space">
+
+                          </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="mdspace">
+                            {{reject.jp_job_deteils}}
+                         </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="mrspace">
+                            {{reject.jp_job_recruitment}} 
+                        </td>
+                    </tr>
+                 </table>
+              
+             </div>
+             
+
+          </div>
+          <div class="rjp">
+                <p class="lebalc">
+                  <b>  Reject Job Post  </b>
+                </p>
+          </div>
+     
+          {% endfor %} 
+
+          
+
+
+    </div>
+  
+  
+</body>
+</html>

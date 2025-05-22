@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <ui class="navbar">
+           <li>
+               <h2 class="nhead">
+                
+                 Job Seeker       <h1 onclick="allmenu()" class="meicon">=</h1>
+                 
+               </h2>
+           </li>
+            
+            <li>
+                <a id="aha" href="EmpHome"><b class="pd">Home</b></a>
+            </li>
+         
+            <li>
+             <a  id="ahb"href="SearchJob"><b class="pd">Search Job</b> </a>
+            </li>
+            <li>
+              <a  id="ahc"href="ApplicationStatus"><b class="pd">Application Status</b></a>
+            </li>
+            <li>
+                <a id="ahout" href="EmpLogin">LogOut</a>
+            </li>
+            
+        </ui>
+   </div>
+
+
+   <script>
+function allmenu(){
+    if (    document.getElementById('aha').style.display == "none"){
+        document.getElementById('aha').style.display = "block"
+        document.getElementById('ahb').style.display = "block"
+        document.getElementById('ahc').style.display = "block"
+        document.getElementById('ahout').style.display = "block"
+    }
+    else{
+        document.getElementById('aha').style.display = "none"
+        document.getElementById('ahb').style.display = "none"
+        document.getElementById('ahc').style.display = "none"
+        document.getElementById('ahout').style.display = "none"
+    }
+
+
+
+}
+   </script>
+    
+</body>
+</html>

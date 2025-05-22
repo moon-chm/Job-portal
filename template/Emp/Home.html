@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'nbar.css' %}">
+ 
+    <link rel="stylesheet" href="{% static 'Home.css' %}">
+
+
+
+    <title>Document</title>
+</head>
+<script src = "{% static 'JavaScript/EmpApplyButton.js' %}">
+</script>
+
+<body>
+    {%include 'Emp/nbar.html' %}
+
+
+
+    
+        
+    <div class="Display">
+
+
+        {% for data in DisplayPost %}
+          <div class="DisplayJob">
+
+            <div class="Company_Logo">
+                <img class="logo_img" src="{{data.c_job_com_logo}}">
+               
+            </div>
+            
+             <div class="JopInfo" >
+              
+                  <table >
+                    <tr>
+                        <td colspan="2" class="titles">
+                            <b>{{data.c_com_name}}</b>
+                        </td>
+
+                   
+                         <td colspan="2" class="titles">
+                           <b> {{data.c_job_title}} </b>
+                         </td>
+                    </tr>
+                    <tr>
+                          <td class="space">
+                             {{data.c_joblpg}}
+                          </td>
+                          <td class="space">
+                            {{data.c_job_state}}
+                          </td>
+                          <td class="space">
+                            {{data.c_job_pincode}}
+                          </td>
+                          <td class="space">
+
+                          </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="mdspace">
+                            {{data.c_job_deteils}}
+                         </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="mrspace">
+                            {{data.c_job_recruitment}} 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="btn">
+                           <a href="/EmpApplyJob/{{data.id}}"  onclick="btnapply()"> 
+                            <button id="{{data.id}}"  class="apply" >
+                               Apply
+                            </button>
+                            </a>
+                        </td>
+                    </tr>
+                 </table>
+              
+
+             </div>
+
+             
+       
+          </div>
+       
+          {% endfor %} 
+
+    </div>
+</body>
+
+
+</html>

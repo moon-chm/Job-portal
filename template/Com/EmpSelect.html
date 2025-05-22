@@ -1,0 +1,105 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'EmpSelect.css' %}">
+
+
+    <title>Hiring</title>
+</head>
+<body>
+
+    <div class="displayF">
+        {% for e in empd %}
+         <div class="Emp_dp">
+            <img class="s_emp_dp" src="{{e.dt_emp_Dp.url}}">
+            <h1>{{e.dt_emp_name}}</h1>
+         </div>
+         <div class="Emp_info">
+            <table class="datainfo">
+                   <tr>
+                       <td class="ptitle">
+                        
+                            College Name :
+                           
+                       </td>
+                       <td class="pinfo">
+                        {{e.dt_emp_college_name}}
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="ptitle">                       
+                            Percentage :-
+                       </td>
+                       <td class="pinfo">
+                        {{e.dt_emp_marks}} %
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="ptitle">
+                        Education :
+                       </td>
+                       <td class="pinfo">
+                        {{e.dt_emp_education}}
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="ptitle">
+                        Field :
+                       </td>
+                       <td class="pinfo">
+                        {{e.dt_emp_field}}
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="ptitle">
+                        Address :
+                       </td>
+                       <td class="pinfo">
+                        {{e.dt_emp_address}}
+                       </td>
+                   </tr>
+                   <tr>
+                       <td class="ptitle">
+                        States :
+                       </td>
+                       <td class="pinfo">
+                        {{e.dt_emp_states}}
+                       </td>
+                   </tr>
+                   <tr>
+                    <td colspan="2" class="infot">
+                        {{e.dt_emp_detelis}}
+                    </td>
+                   </tr>
+                   <tr>
+                    <td colspan="2">
+                        <a href="{{e.dt_emp_Resume.url}}"><button class="btnresume">
+                            Resume
+                        </button></a>                        
+                    </td>
+                   </tr>
+            </table>
+                            
+         </div>
+         {% endfor %} 
+         <div class="Emp_select">
+            {% for empa in empapid %}
+                    <div class="Emp_select_td">
+                       <a href="/EmpReject/{{empa.id}}"> <button class="r_button">Reject Employee</button> </a>
+                    </div>
+                    <div class="Emp_select_td">
+                       <a href="/EmpHire/{{empa.id}}"> <button class="h_button">Hire Employee </button> </a>
+                    </div>
+            {% endfor %} 
+         </div>
+        
+    </div>
+    
+</body>
+</html>

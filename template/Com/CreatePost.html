@@ -1,0 +1,161 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'nbar.css' %}">
+ 
+    <link rel="stylesheet" href="{% static 'CreatePost.css' %}">
+
+    <title>Create Job Post</title>
+</head>
+<style>
+
+</style>
+<body>
+    {%include 'Com/nbar.html' %}
+    
+    <div class="display">
+       
+     
+
+
+        <div class="CreatePost" > 
+            <h2>Create Job Post </h2>
+            <form method="POST" action="CreateJobPost" >
+                {% csrf_token %}
+             <table >
+                    <tr>
+                        
+
+                        <td colspan="3" id="btext">
+                            <input type="text" name="c_job_title" placeholder="Job Title">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="stext">
+                            <input type="text" name="c_joblpg" placeholder="10 - 20 Lpg "> 
+                        </td>
+                        <td id="stext">
+                            <input type="text" name="c_job_state" placeholder="State">
+                        </td>
+                        <td id="stext">
+                            <input type="text" name="c_job_pincode" placeholder="Pic Code">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="dt">
+                            <textarea name="c_job_deteils" placeholder="Job Deteils">
+
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="dt">
+                            <textarea name="c_job_recruitment" placeholder="Job Recruitment">
+                                
+                            </textarea>
+                        </td>
+                    </tr>
+             </table>
+             
+             <div class="btn">
+                 <button type="submit" onclick="submit()">
+                    Create Post
+                 </button>
+             </div>
+            </form>
+        </div>
+        
+   <script>
+    function submit(){
+        alert("Create Jop Post Successfully")
+    }
+   </script>
+
+        <div class="DeletePost">
+         
+
+            {% for data in DisplayPost  %}
+            <div class="DisplayJob"  >
+               
+                 
+                    <div class="Company_Logo">
+                    <img class="logo_img" src="{{data.c_job_com_logo}}">
+                   
+                </div>
+                
+                 <div class="JopInfo">
+                    
+                     <table>
+                        <tr>
+                            <td colspan="2" class="titles">
+                                <b>{{data.c_com_name}}</b>
+                            </td>
+    
+                       
+                             <td colspan="2" class="titles">
+                               <b> {{data.c_job_title}} </b>
+                             </td>
+                        </tr>
+                        <tr>
+                              <td class="space">
+                                 {{data.c_joblpg}}
+                              </td>
+                              <td class="space">
+                                {{data.c_job_state}}
+                              </td>
+                              <td class="space">
+                                {{data.c_job_pincode}}
+                              </td>
+                              <td class="space">
+
+                              </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="mdspace">
+                                {{data.c_job_deteils}}
+                             </td>
+    
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="mrspace">
+                                {{data.c_job_recruitment}} 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="Dbtn">
+                               <a href="/deletepost/{{data.id}}"> <button type="submit" class="DeleteP" onclick="deletepost()">
+                                    Delete DisplayPost
+                                </button>
+                            </a>
+                           
+                            </td>
+                        </tr>
+                     </table>
+                 </div>
+    
+
+           
+            </div>
+         
+            {% endfor %} 
+
+      
+    
+        </div>
+
+    </div>
+<script>
+    function deletepost(){
+        alert("Delete Post Successfully")
+    }
+</script>
+
+
+</body>
+</html>

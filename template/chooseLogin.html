@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'chooseLogin.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Login </title>
+</head>
+<style>
+#emp{
+	width: 360px;
+	height: 260px;
+	margin: 25% 2.5% 10% 10%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border-radius: 15px;
+ }
+
+#emp:hover{
+	margin: 15% 5% 0% 5%;
+	width: 380px;
+	height: 280px;
+	box-shadow: 0 14px 28px rgba(4, 59, 240, 0.397), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+ #com{
+	width: 360px;
+	height: 260px;
+	margin: 25% 5% 10% 2.5%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border-radius: 15px;
+ }
+
+ #com:hover{
+	margin: 15% 5% 0% 5%;
+	width: 380px;
+	height: 280px;
+	box-shadow: 0 14px 28px rgba(4, 59, 240, 0.397), 0 10px 10px rgba(0,0,0,0.22);
+
+}
+
+h1{
+	color: rgb(16, 95, 243);
+	text-align: center;
+	margin: 20px;
+}
+
+h2{
+	color: rgb(156, 98, 22);
+	text-align: center;
+	margin: 20px;
+}
+
+</style>
+<body>
+	<div class="container" id="container">
+
+       <h1>
+		CHOOSE
+	   </h1>
+	   
+
+
+		<div class="form-container log-in-container">
+			<div class="employee">
+				    <a href="EmpLogin">
+			     	<img src="{% static 'devimg/employee.jpg' %}" id="emp">
+					<h2 ><b> EMPLOYEE</b></h2>
+			    </a>
+			</div>
+		</div>
+
+		<div class="overlay-container">
+			<div class="compani">
+			   <a href="ComLogin">
+				  <img src="{% static 'devimg/company.jpg' %}"  id="com">
+			      <h2 ><b> COMPANY </b></h2>
+				</a>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'nbar.css' %}">
+ 
+    <link rel="stylesheet" href="{% static 'EmpHiring.css' %}">
+
+    <title> Employees Hiring</title>
+</head>
+<body>
+    {%include 'Com/nbar.html' %}
+     
+    <div class="dbody">
+      <div class="postdata">
+        {% for p in userajp %}
+
+            <div class="jpost">
+                <div class="DisplayJob">
+                    <div class="Company_Logo">
+                        <img class="logo_img" src="{{p.jp_job_com_logo}}">
+                    </div>
+                    <div class="JopInfo">
+                        <table >
+                            <tr>
+                                <td colspan="2" class="titles">
+                                    <b>{{p.jp_com_name}}</b>
+                                </td>
+        
+                           
+                                 <td colspan="2" class="titles">
+                                   <b> {{p.jp_job_title}} </b>
+                                 </td>
+                            </tr>
+                            <tr>
+                                  <td class="space">
+                                     {{p.jp_joblpg}}
+                                  </td>
+                                  <td class="space">
+                                    {{p.jp_job_state}}
+                                  </td>
+                                  <td class="space">
+                                    {{p.jp_job_pincode}}
+                                  </td>
+                                  <td class="space">
+        
+                                  </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="mdspace">
+                                    {{p.jp_job_deteils}}
+                                 </td>
+        
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="mrspace">
+                                    {{p.jp_job_recruitment}} 
+                                </td>
+                            </tr>
+                        </table>        
+                    </div>
+                </div>
+                {% for e in usereap %}
+                <div class="eajpost">
+                    <div class="empdp">
+                        <img class="emp_img" src="{{e.jp_emp_Dp}}">
+                    </div>
+                    <div class="epinfo">
+                        <table class="emp_data">
+                            <tr>
+                                <td class="emp_name">
+                                    {{e.jp_emp_name}}
+                                </td>
+                                <td class="emp_info">
+                                    {{e.jp_emp_info}}
+                                </td>
+                                <td class="info_btn">
+                                    <a href="/EmpSelect/{{e.id}}">  <button  class="emp_all">
+                                        Details
+                                    </button></a>
+                                  
+                                </td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+                   
+
+                </div>
+                {% endfor %} 
+
+               
+            </div>
+            {% endfor %} 
+      </div>
+    </div>
+</body>
+</html>

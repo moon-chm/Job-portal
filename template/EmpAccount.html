@@ -1,0 +1,138 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CreateAccount.css' %}">
+    <link rel="stylesheet" href="{% static 'Button.css' %}">
+    <title>Create Account</title>
+</head>
+<style>
+ .btn{
+  margin: 15px 0px 15px 75%;
+ }
+</style>
+<body>
+       
+       <div class="account">
+             <div class="title">
+                <h2>
+                    Employee Information
+                </h2>
+             </div>
+             <div class="informetion">
+                  <form method="POST" action="EmpAccount" enctype="multipart/form-data">
+                    {% csrf_token %}
+                         <table>
+                               <tr>
+
+                                   <td >
+                                   
+                                     <input type="text" name="dt_emp_name" placeholder="Employee Name">
+                                    
+                                    </td>
+
+                                   <td>
+                                      <input type="text" name="dt_emp_mobile" placeholder="Enter Mobile No" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46'> 
+                                   </td>
+
+                               </tr>
+
+                               <tr>
+
+                                   <td>
+                                     <input type="email" name="dt_emp_mail" placeholder="Gmail">
+                                   </td>
+
+                                   <td>
+                                      <input type="text" name="dt_emp_password" placeholder="Create Password *">
+                                   </td>
+
+                               </tr>
+                               
+                               <tr>
+
+                                <td>
+                                  <input type="text" name="dt_emp_address" placeholder="Address">
+                               </td>
+
+                                <td>
+                                  <input type="text" name="dt_emp_states" placeholder="State">
+                                </td>
+
+                                
+
+                                </tr>
+
+                               <tr>
+                                <td>
+                                  <input type="text" name="dt_emp_college_name" placeholder="College Name">
+                                </td>
+
+                                <td>
+                                  <input type="text" name="dt_emp_marks" placeholder="Percentage"onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46' >
+                                </td>
+                               </tr>
+
+                               <tr>
+                                    <td>
+                                       <input type="text" name="dt_emp_education" placeholder="Education">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="dt_emp_field" placeholder="Projects Completed">
+                                     </td>
+                               </tr>
+              
+
+                               <tr>
+                                    <td colspan="2" id="imp">
+                                     
+                                        Upload Resume :
+                                      <input type="file" name="dt_emp_Resume" placeholder="Resume">
+                                    
+                                        
+                                    </td>
+                                    
+                               </tr>
+
+                               <tr>
+                                <td colspan="2" id="imp"> 
+                                  
+                                   Upload Image :
+                                   <input type="file" name="dt_emp_Dp"  placeholder="Image">
+                                 
+                               </td>
+                               </tr>
+
+                               <tr>
+                                   <td colspan="2">
+                                       <textarea name="dt_emp_detelis" placeholder="Information">
+                                        
+                                       </textarea>
+                                   </td>
+                               </tr>
+                         </table>
+
+                         <button class="btn" onclick="goLogin()">
+                          <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+                              <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                          </svg>
+                      
+                          <span class="text">Create Account</span>
+                      </button>
+                  </form>
+             </div>
+       </div>
+       
+
+
+      <script>
+        function goLogin(){
+            alert("Account Create")
+        }
+       </script>
+
+</body>
+</html>

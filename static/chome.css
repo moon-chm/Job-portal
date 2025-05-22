@@ -1,0 +1,63 @@
+.ebody{
+
+width: 60%;
+margin-top: 20px;
+}
+.datainfo{
+  
+    width: 80%;
+    height: auto;
+    margin: 30px 10%;
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.932);
+    box-shadow: 0 14px 28px rgba(37, 44, 136, 0.25), 0 10px 10px rgba(62, 111, 202, 0.22);
+   
+}
+.dp{
+   
+    width: 25%;
+    
+    float: left;
+}
+.emp_dp{
+ 
+    width: 90%;
+
+
+    border-radius: 80%;
+}
+.data{
+    
+    width: 75%;
+    float: right;
+}
+.info{
+    
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px;
+}
+.contact{
+    width: 100%;
+    
+    padding: 8px 0px;
+    display: inline-block;
+}
+
+.emp_phone{
+    
+    float: left;
+    width: 40%;
+    
+}
+.emp_gmail{
+    
+    width: 60%;
+    float: right;
+    
+}
+.imgs{
+    width: 40px;
+    height: 30px;
+}

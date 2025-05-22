@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'nbar.css' %}">
+ 
+    <link rel="stylesheet" href="{% static 'chome.css' %}">
+
+    <title>Home</title>
+</head>
+<body>
+    {%include 'Com/nbar.html' %}
+
+
+    {% for hire in empid %}
+    <div class="ebody">
+        <div class="datainfo">
+            <div class="dp">
+                <img class="emp_dp" src="{{hire.dt_emp_Dp.url}}">
+            </div>
+            <div class="data">
+                <div class="info">
+                    {{hire.dt_emp_name}}
+                </div>
+                <div class="contact">
+                    <div class="emp_phone">
+                       <img class="imgs" src="{% static 'devimg/contact icon.png' %}">  {{hire.dt_emp_mobile}}
+                    </div>
+                    <div class="emp_gmail">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{hire.dt_emp_mail}}">  <img class="imgs" src="{% static 'devimg/gmail icon.png' %}"> </a>{{hire.dt_emp_mail}}
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %} 
+
+  
+
+</body>
+</html>
