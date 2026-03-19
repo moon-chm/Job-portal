@@ -1,0 +1,42 @@
+
+.btn {
+	border: none;
+	width: 15em;
+	height: 5em;
+	border-radius: 3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	background: #2b39ff;
+	cursor: pointer;
+	transition: all 450ms ease-in-out;
+  }
+  
+  .sparkle {
+	fill: #AAAAAA;
+	transition: all 800ms ease;
+  }
+  
+  .text {
+	font-weight: 600;
+	color: #AAAAAA;
+	font-size: medium;
+  }
+  
+  .btn:hover {
+	background: -webkit-linear-gradient(to right, #522bff, #41aaff);
+	background: linear-gradient(to right, #2b39ff, #41ffd6);
+	
+	transform: translateY(-2px);
+  }
+  
+  .btn:hover .text {
+	color: white;
+  }
+  
+  .btn:hover .sparkle {
+	fill: white;
+	transform: scale(1.2);
+  } 
+  

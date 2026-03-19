@@ -1,0 +1,157 @@
+
+.dbody{
+    width: 70%;
+
+}
+.jpost{
+    width: 80%;
+    margin: 50px 10% 50px 10%;
+    background-color: rgba(247, 247, 239, 0.411);
+    padding: 20px;
+    border-radius: 10px;
+}
+.eajpost{
+    width: 100%;
+    margin: 35px 0% 35px 0%;
+    padding: 2px 8px 2px 8px;
+    background-color: rgba(255, 255, 255, 0.842);
+    border-radius: 45px;
+    box-shadow: 0 14px 28px rgba(37, 44, 136, 0.25), 0 10px 10px rgba(62, 111, 202, 0.22);
+   
+}
+
+
+
+.DisplayJob{
+    width: 80%;
+    margin: 40px 10% 40px 10%;
+    height: auto;
+    border-radius: 10px;
+     border: 2px solirgba(62, 67, 126, 0.534);
+    padding: 10px;
+    box-shadow: 0 14px 28px rgba(37, 44, 136, 0.25), 0 10px 10px rgba(62, 111, 202, 0.22);
+    background-color: white;
+    display : flex;
+    flex-direction : row;
+}
+.Company_Logo{
+    text-align:justify;
+    width: 20%;
+  }
+  .logo_img{
+    width: 100%;
+    height: 40%;
+    margin-top:10%;
+    margin-right: 10%;
+    border-radius: 80%;
+    
+  }
+  
+  .JopInfo{
+    margin-left: 6%;
+    width: 80%;
+    height: 98%;
+    text-align:justify;
+    
+  }
+  
+  .space{
+    width: 140px;
+    font-size: 14px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.651);
+    padding: 18px 8px 8px 8px;
+    
+  }
+  
+  .mdspace{
+    height: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.856);
+    padding: 8px 8px 15px 8px;
+  }
+  .mrspace{
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.856);
+    padding: 18px 8px 8px 8px;
+  
+    
+  }
+  .titles{
+    height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding: 18px 8px 8px 8px;
+   
+  }
+  td{
+    padding: 2px;
+   
+  }
+  
+  .eajpost{
+    display : flex;
+    flex-direction : row;
+  }
+
+  .empdp{
+    text-align:justify;
+    width: 12%;
+  
+  }
+.emp_img{
+    width: 100%;
+    height: 90%;
+    margin-top:6%;
+    margin-right: 2%;
+    margin-left: 4%;
+    border-radius: 80%;
+}
+
+  .epinfo{
+    text-align:justify;
+    width: 100%;
+
+  }
+  .emp_data{
+
+    
+    margin: 10px 4px 10px 4px;
+  }
+  .emp_name{
+    width: 160px;
+    height: 60px;
+    padding-left: 8px;
+    font-size: 14px;
+    color: black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+  }
+  .emp_info{
+    width: 380px;
+    border-right: 1px solid black;
+    border-radius: 5px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.849);
+  }
+  .info_btn{
+    width: 80px;
+    
+  }
+  .emp_all{
+    background-color: orangered;
+    color: white;
+    font-size: 18px;
+    padding: 8px 4px 8px 4px;
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .emp_all:hover{
+    font-size: 20px;
+    background-color: red;
+  }

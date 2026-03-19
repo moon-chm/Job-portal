@@ -1,0 +1,124 @@
+
+.Search{
+   width: 50%;
+   height: 60px;
+   box-shadow: 0 14px 28px rgba(37, 44, 136, 0.25), 0 10px 10px rgba(62, 111, 202, 0.22);
+   background-color: whitesmoke;
+   border-radius: 10px;
+}
+
+
+
+
+.Display{
+    width: 70%;
+    height: auto;
+    margin-top: 40px;
+   
+}
+
+.DisplayJob{
+    width: 60%;
+    margin: 40px 20% 40px 20%;
+    height: auto;
+    border-radius: 10px;
+     border: 2px solirgba(62, 67, 126, 0.534);
+    padding: 10px;
+    box-shadow: 0 14px 28px rgba(37, 44, 136, 0.25), 0 10px 10px rgba(62, 111, 202, 0.22);
+    background-color: white;
+    display : flex;
+    flex-direction : row;
+}
+.Company_Logo{
+    text-align:justify;
+    width: 20%;
+  }
+  .logo_img{
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+    margin-right: 6%;
+    border-radius: 60%;
+    
+  }
+  
+  .JopInfo{
+    margin-left: 6%;
+    width: 70%;
+    height: 98%;
+    text-align:justify;
+    
+  }
+  
+  .space{
+    width: 140px;
+    font-size: 14px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.651);
+    padding: 18px 8px 8px 8px;
+    
+  }
+  
+  .mdspace{
+    height: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.856);
+    padding: 8px 8px 15px 8px;
+  }
+  .mrspace{
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.856);
+    padding: 18px 8px 8px 8px;
+  
+    
+  }
+  .titles{
+    height: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding: 18px 8px 8px 8px;
+   
+  }
+  td{
+    padding: 2px;
+   
+  }
+  
+.btn{
+    height: 40px;
+    text-align: right;
+}
+.apply{
+    background-color: #0439aa; /* Green */
+    padding: 4px 8px 4px 8px ;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    border-radius: 25px;
+}
+
+.apply:hover{
+    font-size: 19px;
+    background-color: #0407aa;
+}
+.se{
+    width: 500px;
+    height: 60px;
+}
+.se> input{
+    font-size: 16px;
+    height: 40px;
+    width: 520px;
+    margin: 4px 15px 4px 10px;
+    padding-left: 30px;
+    border-radius: 25px;
+}
+
+.Search > table{
+    margin-left: 20px;
+}
+
